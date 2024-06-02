@@ -1,0 +1,61 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.pomodoro {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#timer {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+#minutes, #seconds {
+    width: 80px;
+    font-size: 1em;
+    text-align: center;
+    border: none;
+    background-color: #f0f0f0;
+}
+
+#minutes:focus, #seconds:focus {
+    outline: none;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.controls button {
+    padding: 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 50%; /* Make buttons round */
+    width: 80px; /* Ensure buttons are circular */
+    height: 80px; /* Ensure buttons are circular */
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #ff5252;
+}
+
+.controls button:active {
+    background-color: #ff3b3b;
+}
