@@ -1,7 +1,5 @@
 # Pomodoro Timer Web App
 
-![Pomodoro Timer Screenshot](screenshot.png)
-
 ## Overview
 
 This is a simple Pomodoro Timer web app designed to help users manage their work and break intervals effectively using the Pomodoro Technique. The app allows users to set customizable work and break durations and provides visual and audio notifications when each session ends.
