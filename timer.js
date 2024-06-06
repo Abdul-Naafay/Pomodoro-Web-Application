@@ -52,6 +52,20 @@ function updateRemainingTime() {
     const seconds = parseInt(document.getElementById('seconds').value, 10) || 0;
     remainingTime = (minutes * 60) + seconds;
 }
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
 
+        const targetId = this.getAttribute('href').substring(1); // Remove the '#'
+        const target = document.getElementById(targetId);
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 // Initialize display
 updateDisplay();
