@@ -7,19 +7,76 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="pomodoro">
+    <header class="header">
         <h1>Pomodoro Timer</h1>
-        <div id="timer">
-            <input type="number" id="minutes" value="25" min="0" max="99">:<input type="number" id="seconds" value="00" min="0" max="59">
+        <nav>
+            <ul>
+                <li><a href="#timer">Timer</a></li>
+                <li><a href="#how-to-use">How to Use</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="pomodoro" id="timer">
+            <div id="timer-display">
+                <input type="number" id="minutes" value="25" min="0" max="99">:<input type="number" id="seconds" value="00" min="0" max="59">
+            </div>
+            <div class="controls">
+                <button onclick="startTimer()">Start</button>
+                <button onclick="pauseTimer()">Pause</button>
+                <button onclick="resetTimer()">Reset</button>
+            </div>
+        
+            <!-- Audio element for the alarm sound -->
+            <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
         </div>
-        <div class="controls">
-            <button onclick="startTimer()">Start</button>
-            <button onclick="pauseTimer()">Pause</button>
-            <button onclick="resetTimer()">Reset</button>
-        </div>
-    </div>
-    <!-- Audio element for the alarm sound -->
-    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
-    <script src="timer.js"></script>
+
+        <section id="how-to-use" class="content-section">
+            <h2>How to Use</h2>
+            <p>1. Set your desired work and break intervals using the timer above.</p>
+            <p>2. Click 'Start' to begin the countdown.</p>
+            <p>3. Work until the timer rings, then take a short break.</p>
+            <p>4. Repeat the cycle. After four sessions, take a longer break.</p>
+        </section>
+
+        <section id="faq" class="content-section">
+            <h2>FAQ</h2>
+            <h3>What is the Pomodoro Technique?</h3>
+            <p>The Pomodoro Technique is a time management method that breaks work into intervals, traditionally 25 minutes in length, separated by short breaks.</p>
+            <h3>Can I adjust the timer intervals?</h3>
+            <p>Yes, you can set your desired minutes and seconds for both work and break periods using the input fields above.</p>
+            <h3>What happens when the timer reaches zero?</h3>
+            <p>An alarm will sound, and an alert will notify you that the time is up. You can then choose to start another session or take a longer break.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <p>&copy; 2024 Abdul Naafay. Some rights reserved.</p>
+        <ul class="footer-icons">
+            <li>
+                <a href="https://linkedin.com/in/abdul-naafay-03495b284">
+                    <div class="small-icon">
+                        <img src="./linkedin.png" alt="LinkedIn Icon">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/abdul-naafay">
+                    <div class="small-icon">
+                        <img src="./github.webp" alt="GitHub Icon">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:naafayawan57@gmail.com">
+                    <div class="small-icon">
+                        <img src="./gmail.png" alt="Gmail Icon">
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
