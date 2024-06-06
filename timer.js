@@ -1,4 +1,3 @@
-// script.js
 let timer;
 let isRunning = false;
 let remainingTime = 25 * 60; // 25 minutes in seconds
@@ -23,14 +22,16 @@ function resetTimer() {
     remainingTime = 25 * 60;
     updateDisplay();
 }
+
 function playAlarm() {
     const alarmSound = document.getElementById('alarmSound');
     alarmSound.play();
 }
+
 function updateTimer() {
     if (remainingTime <= 0) {
         clearInterval(timer);
-        playAlarm()
+        playAlarm();
         alert("Time's up!");
         resetTimer();
         return;
